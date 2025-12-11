@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-
-
-:root{
+:root {
   font-family: "Roboto";
   --green: #66CB92;
   --red: #FF9396;
@@ -11,28 +8,27 @@
   --bg-color-2: #00DBDE;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   background: linear-gradient(to right, var(--bg-color-1), var(--bg-color-2));
   width: 100%;
   min-height: 100vh;
 }
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
 .flip-card {
   background-color: transparent;
   width: 300px;
   height: 200px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
   text-align: center;
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -41,74 +37,156 @@ body{
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.turn .flip-card-inner {
+
+.flip-card-inner.flipped {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden; 
   backface-visibility: hidden;
   border-radius: 5%;
 }
 
-/* Style the front side (fallback if image is missing) */
+
 .flip-card-front {
   background-color: var(--green);
   color: black;
   text-align: center;
-  display: flex;  
-  justify-content: center;  
+  display: flex;
+  justify-content: center;
   align-items: center;
-  h1{
+  h1 {
     text-align: center;
   }
 }
 
-/* Style the back side */
 .flip-card-back {
   background-color: white;
   color: black;
   transform: rotateY(180deg);
   text-align: center;
-  display: flex;  
-  justify-content: center;  
+  display: flex;
+  justify-content: center;
   align-items: center;
-  h1{
+  h1 {
     text-align: center;
   }
   display: flex;
   flex-direction: column;
   gap: 10px;
-  .butt{
+  .butt {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    button{
+    button {
       height: 70px;
       width: 70px;
       border-radius: 50%;
     }
   }
-
 }
 
-
-.MainCard{
+.MainCard {
   margin: auto;
 }
 
-.Container{
+.Container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-.Hidden{
-  display: none;
+.otherButtons {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  flex-direction: column;
+  gap: 10px;
+  .btn1, .btn2 {
+    margin-top: 70vh;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    height: 10vh;
+    font-size: 16px;
+  }
+  .btn2{
+    margin-top: 5px;
+  }
+}
+
+
+.red{
+  background-color: var(--red);
+}
+.green{
+  background-color: var(--green);
+}
+
+.white{
+  background-color: white;
+}
+
+.CreatingCard{
+  height: 200px;
+  background-color: white;
+  width:500px;  
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  label{
+    font-size: 20px;
+    margin-right: 10px;
+    text-align: center;
+  }
+  .input{
+    margin-top: 10px;
+    height: 100px;
+    width: 220px;
+    border-radius: 5%;
+    border-color: rgba(0, 0, 0, 0.082);
+    padding: 0;
+    text-align: calc();
+  }
+  gap: 20px;
+
+}
+
+.newCard{
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  h1{
+    margin-bottom: 20vh;
+    color: white;
+  }
+}
+
+.xd{
+  margin-top:0;
+  background-color: white;
+  width:500px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button{
+    background-color: var(--green);
+    color: white;
+    height: 50px;
+    width: 100px;
+    border-radius: 45%;
+    font-size: 16px;
+    border-color: rgba(0, 0, 0, 0.082);
+  }
 }
